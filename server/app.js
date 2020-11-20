@@ -2,9 +2,13 @@ const express = require('express');
 const {graphqlHTTP} = require('express-graphql')
 const schema = require('./schema/schema');
 const mongoose = require('mongoose');
+const cors = require('cors');
 const URL_MONGODB = require('./config/keys');
 
 const app = express();
+
+// /** enable all CORS requests  */
+// app.use(cors());
 
 // connect to mongoDB
 ;
@@ -14,7 +18,7 @@ mongoose.connection.once('open', ()=>{
 })
 
 // graphql route handler
-app.use('/graphql', graphqlHTTP({
+app.use('/graphql', cors(), graphqlHTTP({
   schema: schema,
   graphiql: true
 }))
