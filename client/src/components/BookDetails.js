@@ -23,7 +23,7 @@ function BookDetails(props) {
 								.filter((book) => book.id != props.selectedId)
 								.map((book) => <li key={book.id}>{book.name}</li>)
 						) : (
-							<div>none</div>
+							<div>no more</div>
 						)}
 					</ul>
 				</div>
