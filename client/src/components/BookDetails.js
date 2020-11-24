@@ -13,8 +13,9 @@ function BookDetails(props) {
 		if (book) {
 			console.log(book);
 			return (
-				<div>
+				<div className="book-detail">
 					<h3>Book: {book.name}</h3>
+					<p>Genre: {book.genre}</p>
 					<p>Author: {book.author.name}</p>
 					<p>other books from this author: </p>
 					<ul>

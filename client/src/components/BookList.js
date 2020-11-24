@@ -11,7 +11,7 @@ function BookList(props) {
 	if (error) return <p>Error</p>;
 
 	return (
-		<div>
+		<div className="book-list">
 			<ul>
 				{data.books.map((book) => (
 					<li key={book.id} onClick={(e) => setSelectedId(book.id)}>
