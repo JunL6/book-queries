@@ -1,6 +1,7 @@
 import React from "react";
 import { useQuery } from "@apollo/client";
 import { GET_BOOK_DETAIL } from "../queries/queries";
+import PropTypes from "prop-types";
 
 function BookDetails(props) {
 	const { loading, error, data } = useQuery(GET_BOOK_DETAIL, {
@@ -35,5 +36,9 @@ function BookDetails(props) {
 	if (loading) return <div>loading book details...</div>;
 	return <div>{displayBookDetails()}</div>;
 }
+
+BookDetails.propTypes = {
+	selectedId: PropTypes.string,
+};
 
 export default BookDetails;
