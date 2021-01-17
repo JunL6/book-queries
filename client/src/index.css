@@ -21,6 +21,10 @@ code {
 	height: 100%;
 }
 
+.app h1 {
+	margin-left: 3.2rem;
+}
+
 .book-list {
 	padding: 0;
 }
